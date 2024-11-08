@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo-placeholder"></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="knowledge-hub.html">Knowledge Hub</a>
+            <a href="tools.html">Interactive Tools</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Login Form Section -->
+    <section class="content-section" id="formSection">
+        <div>
+        <h2>Contact</h2>
+
+        <!-- Login Form -->
+        <div id="loginForm">
+            <form action="">
+            <h3>Login</h3>
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter password">
+            <button onclick="login()">Login</button>
+            <p id="loginMessage"></p>
+            <p>Don’t have an account? <a href="#" onclick="showSignUp()">Sign up here</a></p>
+        </div></form>
+
+        <!-- Sign-Up Form -->
+        <div id="signUpForm" style="display: none;">
+            <form action="">
+            <h3>Sign Up</h3>
+            <label for="newUsername">Username:</label>
+            <input type="text" id="newUsername" placeholder="Enter a username">
+            <label for="newPassword">Password:</label>
+            <input type="password" id="newPassword" placeholder="Enter a password">
+            <button onclick="signUp()">Sign Up</button>
+            <p id="signUpMessage"></p>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Send Message Section -->
+    <section class="content-section">
+        <div>
+        <h3>Send a Message to Another Farmer</h3>
+        <label for="recipient">Select Recipient:</label>
+        <select id="recipient">
+            <option value="Farmer1">Farmer1</option>
+            <option value="Farmer2">Farmer2</option>
+            <!-- Add other users dynamically if needed -->
+        </select>
+        <textarea id="messageContent" placeholder="Write your message here..."></textarea>
+        <button type="button" onclick="sendMessage()">Send</button>
+        <p id="messageStatus"></p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Food Resource Production. All rights reserved.
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
